@@ -7,11 +7,11 @@ from dotenv import load_dotenv
 load_dotenv()
 def main():
     source_config = {
-        'DB_HOST': os.getenv('FDB_HOST'),
-        'DB_USER': os.getenv('FDB_USER'),
-        'DB_PASSWORD': os.getenv('FDB_PASSWORD'),
-        'DB_DATABASE': os.getenv('FDB_DATABASE'),
-        'DB_TYPE': 'fdb'
+    'DB_HOST': os.getenv('FDB_HOST'),
+    'DB_USER': os.getenv('FDB_USER'),
+    'DB_PASSWORD': os.getenv('FDB_PASSWORD'),
+    'DB_DATABASE': os.getenv('FDB_DATABASE'),
+    'DB_TYPE': 'fdb'
     }
 
     target_config = {
@@ -20,7 +20,7 @@ def main():
         'DB_PASSWORD': os.getenv('SQL_PASSWORD'),
         'DB_DATABASE': os.getenv('SQL_DATABASE'),
         'DB_TYPE': 'mysql'
-    }
+        }
 
     migrationManager = MigrationManager(source_config, target_config)
     try:

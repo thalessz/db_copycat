@@ -2,11 +2,11 @@ from sqlalchemy import create_engine
 
 class DatabaseConnector:
     def __init__(self, config):
-        self.host = config['host']
-        self.user = config['user']
-        self.password = config['password']
-        self.database = config['database']
-        self.db_type = config['db_type']
+        self.host = config['DB_HOST']
+        self.user = config['DB_USER']
+        self.password = config['DB_PASSWORD']
+        self.database = config['DB_DATABASE']
+        self.db_type = config['DB_TYPE']
         self.engine = None
 
     def connect(self):
@@ -48,15 +48,12 @@ class MigrationManager:
 
     def get_table_structure(self, table_name):
         with self.source_connector.engine.connect() as conn:
-            structure = f'''
-            SELECT RDB$FIELD_NAME, RDB$TYPE, RDB$NULL_FLAG
-            FROM RDB$RELATION_FIELDS
-            WHERE RDB$RELATION_NAME = '{table_name}'
-            '''
+            structure = f"SELECT RDB$FIELD_NAME, RDB$TYPE, RDB$NULL_FLAG FROM RDB$RELATION_FIELDS WHERE RDB$RELATION_NAME = '{table_name}'"
             stResult = conn.execute(structure)
             return stResult.fetchall()
 
-    def create_table(self, table_name, structure, conn):
+    @staticmethod
+    def create_table(table_name, structure, conn):
         columns = []
         for field_name, field_type, null_flag in structure:
             sql_type = {
