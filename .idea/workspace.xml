@@ -7,8 +7,9 @@
     <list default="true" id="3b4e70bc-9391-4e03-8b68-3e74fb0e37ff" name="Changes" comment="First Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/copycat.py" beforeDir="false" afterPath="$PROJECT_DIR$/copycat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
+    <list id="f2724beb-a755-4f94-87a5-ba963652d21b" name="Changes by MMSOUZA" comment="">
+      <change beforePath="$PROJECT_DIR$/copycat.py" beforeDir="false" afterPath="$PROJECT_DIR$/copycat.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +25,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/copycat.py">
+      <ranges>
+        <range start1="1" end1="2" start2="1" end2="1" changelist="f2724beb-a755-4f94-87a5-ba963652d21b" />
+        <range start1="92" end1="93" start2="91" end2="92" changelist="3b4e70bc-9391-4e03-8b68-3e74fb0e37ff" />
+      </ranges>
+    </file>
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />

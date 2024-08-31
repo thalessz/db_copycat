@@ -1,5 +1,4 @@
 import pandas as pd
-from sqlalchemy import create_engine
 
 class DatabaseConnector:
     def __init__(self, config):
@@ -90,7 +89,7 @@ class MigrationManager:
         finally:
             self.source_connector.close_connection()
             self.target_connector.close_connection()
-
+    @staticmethod
     def create_table_in_target(self, table_name, structure, conn):
         cursor = conn.cursor()
         columns = []
